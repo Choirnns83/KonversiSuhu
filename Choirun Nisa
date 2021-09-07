@@ -1,0 +1,67 @@
+print("Choirun Nisa")
+print("210441100152")
+print("Sistem Informasi 2021")
+print("-> Pemrograman Konversi Suhu <-")
+print("Penulisan Suhu disertai C/R/K/F")
+print("Contoh : 100C/100R/100F/100K")
+
+def Konversi(suhu):
+   y = int(suhu[:-1])
+   inputan = suhu[-1]
+
+   if inputan.upper() == "C":
+     a = float((y * 9/5) + 32)
+     b = float(y + 273)
+     c = float(y * 4/5)
+     x = "Celcius"
+     p = "Fahrenheit"
+     q = "Kelvin"
+     r = "Reamur"
+     print(y,x,"=","{:.1f}".format(a),p)
+     print(y,x,"=","{:.1f}".format(b),q)
+     print(y,x,"=","{:.1f}".format(c),r)
+  
+   elif inputan.upper() == "R":
+     a = float(y * 5/4)
+     b = float((y * 9/4) + 32 )
+     c = float((y * 5/4) + 273)
+     x = "Reamur"
+     p = "Celcius"
+     q = "Fahrenheit"
+     r = "Kelvin"
+     print(y,x,"=","{:.1f}".format(a),p)
+     print(y,x,"=","{:.1f}".format(b),q)
+     print(y,x,"=","{:.1f}".format(c),r)
+
+   elif inputan.upper() == "F":
+     a = float((y - 32) * 5/9)
+     b = float((y - 32) * 5/9 + 273)
+     c = float((y-32) * 4/9)
+     x = "Fahrenheit"
+     p = "Celsius"
+     q = "Kelvin"
+     r = "Reamur"
+     print(y,x,"=","{:.1f}".format(a),p)
+     print(y,x,"=","{:.1f}".format(b),q)
+     print(y,x,"=","{:.1f}".format(c),r)
+
+   elif inputan.upper() == "K":
+     a = float(y - 273)
+     b = float((y - 273) * 9/5 + 32)
+     c = float((y-273) * 4/5)
+     x = "Kelvin"
+     p = "Celcius"
+     q = "Fahrenheit"
+     r = "Reamur"
+     print(y,x,"=","{:.1f}".format(a),p)
+     print(y,x,"=","{:.1f}".format(b),q)
+     print(y,x,"=","{:.1f}".format(c),r)
+   
+     
+   else:
+      print("Input Tidak Sesuai")
+
+i="mulai"
+while i=="mulai":
+   temp = input("\nMasukkan Suhu: ")
+   Konversi(temp)
